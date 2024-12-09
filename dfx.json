@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "hackaton_backend": {
+      "candid": "src/hackaton_backend/hackaton_backend.did",
+      "package": "hackaton_backend",
+      "type": "rust"
+    },
+    "hackaton_frontend": {
+      "dependencies": [
+        "hackaton_backend"
+      ],
+      "source": [
+        "src/hackaton_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "hackaton_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
