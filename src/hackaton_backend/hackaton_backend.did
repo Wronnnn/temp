@@ -1,3 +1,12 @@
+type Profile = record {
+    name: text;
+    descripton: text;
+    keywords: vec text;
+};
+
 service : {
-    "greet": (text) -> (text) query;
+    getSelf: () -> (Profile) query;
+    restricted_action: () -> (text);
+    add_yourself_to_authorised: () -> ();
+    remove_yourself_from_authorised: () -> ();
 }
